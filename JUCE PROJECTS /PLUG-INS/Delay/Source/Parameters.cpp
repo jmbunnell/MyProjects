@@ -17,9 +17,11 @@ static void castParameter(juce::AudioProcessorValueTreeState& apvts, const juce:
     jassert(destination);
 }
 
+//Constructor
 Parameters::Parameters(juce::AudioProcessorValueTreeState& apvts)
 {
     castParameter(apvts, gainParamID, gainParam);
+    castParameter(apvts, delayTimeParamID, delayTimeParam);
 }
 
 
@@ -32,6 +34,12 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
         "Output Gain",
         juce::NormalisableRange<float> { -12.0f, 12.0f },
         0.0f));
+    
+    layout.add(std::make_unique<juce::AudioParameterFloat>(
+        delayTimeParamID,
+        "Delay Time",
+        juce::NormalisableRange<float> { minDelayTime, maxDelayTime},
+        100.0f));
     
     return layout;
 }
