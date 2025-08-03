@@ -4,7 +4,7 @@
 //Double that number is: 8
 
 #include <iostream>
-
+/*
 int main() {
     
     std::cout << "Enter an integer: ";
@@ -14,6 +14,25 @@ int main() {
    
     std::cout << "Double that number is: " << num * 2 << std::endl;
     std::cout << "Triple that number is: " << num * 3 << std::endl;
+    
+    return 0;
+}*/
+
+
+int main() {
+    
+    std::cout << "Enter an integer: ";
+    
+    double num{};
+    std::cin >> num;
+    
+    std::cout << "Enter another integer: ";
+    
+    double numTwo{};
+    std::cin >> numTwo;
+   
+    std::cout << num << "+" << numTwo << "=" << num + numTwo << std::endl;
+    std::cout << num << "-" << numTwo << "=" << num - numTwo << std::endl;
     
     return 0;
 }
