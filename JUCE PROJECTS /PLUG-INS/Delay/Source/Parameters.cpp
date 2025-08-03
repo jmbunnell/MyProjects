@@ -17,6 +17,24 @@ static void castParameter(juce::AudioProcessorValueTreeState& apvts, const juce:
     jassert(destination);
 }
 
+static juce::String stringFromMilliseconds(float value, int)
+{
+    if (value < 10.f) {
+        return juce::String(value, 2) + " ms";
+    } else if (value < 100.0f) {
+        return juce::String(value, 1) + " ms";
+    } else if (value < 1000.0f) {
+        return juce::String(int(value)) + " ms";
+    } else {
+        return juce::String(value * 0.001f, 2) + " s";
+    }
+}
+
+static juce::String stringFromDecibels(float value, int)
+{
+    return juce::String(value, 1) + " dB";
+}
+
 //Constructor
 Parameters::Parameters(juce::AudioProcessorValueTreeState& apvts)
 {
@@ -33,13 +51,17 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
         gainParamID,
         "Output Gain",
         juce::NormalisableRange<float> { -12.0f, 12.0f },
-        0.0f));
+        0.0f,
+        juce::AudioParameterFloatAttributes().withStringFromValueFunction(stringFromDecibels)
+    ));
     
     layout.add(std::make_unique<juce::AudioParameterFloat>(
         delayTimeParamID,
         "Delay Time",
-        juce::NormalisableRange<float> { minDelayTime, maxDelayTime},
-        100.0f));
+        juce::NormalisableRange<float> { minDelayTime, maxDelayTime, 0.001f, 0.25f},
+        100.0f,
+        juce::AudioParameterFloatAttributes().withStringFromValueFunction(stringFromMilliseconds)
+    ));
     
     return layout;
 }
@@ -49,6 +71,8 @@ void Parameters::update() noexcept
     //float gainInDecibels = gainParam->get();
     //float newGain = juce::Decibels::decibelsToGain(gainInDecibels);
     gainSmoother.setTargetValue(juce::Decibels::decibelsToGain(gainParam->get()));
+    
+    delayTime = delayTimeParam->get();
 }
 
 void Parameters::prepareToPlay(double sampleRate) noexcept
@@ -60,6 +84,7 @@ void Parameters::prepareToPlay(double sampleRate) noexcept
 void Parameters::reset() noexcept
 {
     gain = 0.0f;
+    delayTime = 0.0f;
     
     gainSmoother.setCurrentAndTargetValue(
     juce::Decibels::decibelsToGain(gainParam->get()));
