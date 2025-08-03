@@ -31,8 +31,8 @@ int main() {
     double numTwo{};
     std::cin >> numTwo;
    
-    std::cout << num << "+" << numTwo << "=" << num + numTwo << std::endl;
-    std::cout << num << "-" << numTwo << "=" << num - numTwo << std::endl;
+    std::cout << num << " + " << numTwo << " is " << num + numTwo << ".\n";
+    std::cout << num << " - " << numTwo << " is " << num - numTwo << ".\n";
     
     return 0;
 }
