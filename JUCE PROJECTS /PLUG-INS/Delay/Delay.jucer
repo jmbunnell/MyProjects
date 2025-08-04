@@ -7,13 +7,15 @@
     <GROUP id="{D4BEDFC3-A7A0-F4E4-2FB8-2C5E6764617D}" name="Source">
       <FILE id="bDZEtU" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
       <FILE id="C7y2Dq" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
+      <FILE id="dfCR6V" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="JNjyQG" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="XBjXGw" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="LFO2RR" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="dfCR6V" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="JNjyQG" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="SD3j3Y" name="RotaryKnob.cpp" compile="1" resource="0" file="Source/RotaryKnob.cpp"/>
+      <FILE id="hU1MUG" name="RotaryKnob.h" compile="0" resource="0" file="Source/RotaryKnob.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
