@@ -29,6 +29,7 @@
 		100C6073CDF63FDBEE0152F1 /* AudioUnit.framework */ = {isa = PBXBuildFile; fileRef = 78FDE67B27E2D25B20036686; };
 		13791D239877E484B7773115 /* Parameters.cpp */ = {isa = PBXBuildFile; fileRef = 304EB37C619CE3135C54BFF0; };
 		141FEF6565513BF8CDDCC07B /* Security.framework */ = {isa = PBXBuildFile; fileRef = D7F4C8F26C901361316A168F; };
+		18A7D3B0553E7B773AFD9F6E /* LookAndFeel.cpp */ = {isa = PBXBuildFile; fileRef = F85B788A2FE3088C3C613C05; };
 		1ABAF453F0F75E8CCDD02B9D /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 5470ECE728C2C3D273095343; };
 		2695710708F3E86E111EF98A /* CoreAudio.framework */ = {isa = PBXBuildFile; fileRef = 8D643AB497E4A5B4E4F3A530; };
 		271F4EE0E0B74AD79E1B911D /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXBuildFile; fileRef = 1F71F41E5C00B89952070CD1; };
@@ -118,6 +119,7 @@
 		3CE6F0DD1D144FE4819C2BAF /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = /Users/jake/Documents/JUCE/modules/juce_events; sourceTree = "<absolute>"; };
 		3E4AB378534BC2D2606C3ED5 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = /Users/jake/Documents/JUCE/modules/juce_gui_basics; sourceTree = "<absolute>"; };
 		408C565DBB4B297BD8BB04C0 /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		43960A9A4538D0E319E5E276 /* LookAndFeel.h */ /* LookAndFeel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LookAndFeel.h; path = ../../Source/LookAndFeel.h; sourceTree = SOURCE_ROOT; };
 		44931BBBD9883519D854E275 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
 		44D3B62FB33530B6A01B757D /* include_juce_audio_plugin_client_AU_1.mm */ /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_1.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
 		46CB9FA13D31AB3B757BB6A7 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDelay.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 		EAD276EDDA613CE7984AB69B /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		ED584A880D727A95D9288283 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
 		F2BB5C102EF7A1AE702212D0 /* include_juce_core_CompilationTime.cpp */ /* include_juce_core_CompilationTime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_core_CompilationTime.cpp; path = ../../JuceLibraryCode/include_juce_core_CompilationTime.cpp; sourceTree = SOURCE_ROOT; };
+		F85B788A2FE3088C3C613C05 /* LookAndFeel.cpp */ /* LookAndFeel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LookAndFeel.cpp; path = ../../Source/LookAndFeel.cpp; sourceTree = SOURCE_ROOT; };
 		F9EA6F1CE745BEDEC8FE8C57 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -401,6 +404,8 @@
 		F379DD0728330F697BA9FE27 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F85B788A2FE3088C3C613C05,
+				43960A9A4538D0E319E5E276,
 				304EB37C619CE3135C54BFF0,
 				E273660AF47EE56CD55B52F1,
 				475842D8E3FD17950E0D1D12,
@@ -829,6 +834,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A7D3B0553E7B773AFD9F6E,
 				13791D239877E484B7773115,
 				EF7E4EF8E956AADDE0C07EEA,
 				3D72D13DE68789C32848E140,

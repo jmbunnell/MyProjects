@@ -24,6 +24,7 @@
 
 /* Begin PBXBuildFile section */
 		13791D239877E484B7773115 /* Parameters.cpp */ = {isa = PBXBuildFile; fileRef = 304EB37C619CE3135C54BFF0; };
+		18A7D3B0553E7B773AFD9F6E /* LookAndFeel.cpp */ = {isa = PBXBuildFile; fileRef = F85B788A2FE3088C3C613C05; };
 		1A3B628ACF818061B2A01158 /* CoreGraphics.framework */ = {isa = PBXBuildFile; fileRef = FA94BDA4A232FDA655057DE7; };
 		1ABAF453F0F75E8CCDD02B9D /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 5470ECE728C2C3D273095343; };
 		2695710708F3E86E111EF98A /* CoreAudio.framework */ = {isa = PBXBuildFile; fileRef = 8D643AB497E4A5B4E4F3A530; };
@@ -106,6 +107,7 @@
 		3CE6F0DD1D144FE4819C2BAF /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = /Users/jake/Documents/JUCE/modules/juce_events; sourceTree = "<absolute>"; };
 		3E4AB378534BC2D2606C3ED5 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = /Users/jake/Documents/JUCE/modules/juce_gui_basics; sourceTree = "<absolute>"; };
 		408C565DBB4B297BD8BB04C0 /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		43960A9A4538D0E319E5E276 /* LookAndFeel.h */ /* LookAndFeel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LookAndFeel.h; path = ../../Source/LookAndFeel.h; sourceTree = SOURCE_ROOT; };
 		44931BBBD9883519D854E275 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
 		452C977EDB269A7F741837D7 /* CoreText.framework */ /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		46CB9FA13D31AB3B757BB6A7 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDelay.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 		EA362FF4B28221C68347D9A8 /* UniformTypeIdentifiers.framework */ /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 		EAD276EDDA613CE7984AB69B /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		F2BB5C102EF7A1AE702212D0 /* include_juce_core_CompilationTime.cpp */ /* include_juce_core_CompilationTime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_core_CompilationTime.cpp; path = ../../JuceLibraryCode/include_juce_core_CompilationTime.cpp; sourceTree = SOURCE_ROOT; };
+		F85B788A2FE3088C3C613C05 /* LookAndFeel.cpp */ /* LookAndFeel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = LookAndFeel.cpp; path = ../../Source/LookAndFeel.cpp; sourceTree = SOURCE_ROOT; };
 		F9EA6F1CE745BEDEC8FE8C57 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		FA94BDA4A232FDA655057DE7 /* CoreGraphics.framework */ /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -323,6 +326,8 @@
 		F379DD0728330F697BA9FE27 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F85B788A2FE3088C3C613C05,
+				43960A9A4538D0E319E5E276,
 				304EB37C619CE3135C54BFF0,
 				E273660AF47EE56CD55B52F1,
 				475842D8E3FD17950E0D1D12,
@@ -560,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A7D3B0553E7B773AFD9F6E,
 				13791D239877E484B7773115,
 				EF7E4EF8E956AADDE0C07EEA,
 				3D72D13DE68789C32848E140,
