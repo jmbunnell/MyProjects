@@ -49,4 +49,11 @@ void RotaryKnobLookAndFeel::drawRotarySlider (
         lineWidth, juce::PathStrokeType::curved, juce::PathStrokeType::rounded);
     g.setColour(Colors::Knob::trackBackground);
     g.strokePath(backgroundArc, strokeType);
+    
+    auto dialRadius = innerRect.getHeight() / 2.0f;
+    auto toAngle = rotaryStartAngle + sliderPos * (rotaryEndAngle - rotaryStartAngle);
+    
+    juce::Point<float> dialStart(center.x, center.y);
+    juce::Point<float> dialEnd(center.x + dialRadius * std::sin(toAngle),
+                               center.y - dialRadius * std::cos(toAngle));
 }
