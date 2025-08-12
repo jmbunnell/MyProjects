@@ -13,7 +13,7 @@
 #include "LookAndFeel.h"
 
 //==============================================================================
-RotaryKnob::RotaryKnob(const juce::String& text, juce::AudioProcessorValueTreeState& apvts, const juce::ParameterID& parameterID)
+RotaryKnob::RotaryKnob(const juce::String& text, juce::AudioProcessorValueTreeState& apvts, const juce::ParameterID& parameterID, bool drawFromMiddle)
     : attachment(apvts, parameterID.getParamID(), slider)
 {
     // In your constructor, you should add any child components, and
@@ -33,6 +33,8 @@ RotaryKnob::RotaryKnob(const juce::String& text, juce::AudioProcessorValueTreeSt
     
     float pi = juce::MathConstants<float>::pi;
     slider.setRotaryParameters(1.25f * pi, 2.75f * pi, true);
+    
+    slider.getProperties().set("drawFromMiddle", drawFromMiddle);
     
     setSize(70, 110);
 
