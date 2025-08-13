@@ -23,6 +23,14 @@ namespace Colors
     }
 }
 
+class Fonts
+{
+    public:
+        static juce::Font getFont(float height = 16.0f);
+    private:
+        static const juce::Typeface::Ptr typeface;
+};
+
 class RotaryKnobLookAndFeel : public juce::LookAndFeel_V4
 {
     public:

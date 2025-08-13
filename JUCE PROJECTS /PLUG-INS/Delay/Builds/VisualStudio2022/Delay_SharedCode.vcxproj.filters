@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Delay\Assets">
+      <UniqueIdentifier>{09549CE1-62B6-9674-AFDA-790891E21BAB}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Delay\Source">
       <UniqueIdentifier>{25D4C159-561B-16AE-0DAF-A3BA8DD66441}</UniqueIdentifier>
     </Filter>
@@ -3621,6 +3624,9 @@
     </ClCompile>
     <ClCompile Include="C:\JUCE\modules\juce_gui_extra\juce_gui_extra.mm">
       <Filter>JUCE Modules\juce_gui_extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>JUCE Library Code</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp">
       <Filter>JUCE Library Code</Filter>
@@ -7734,6 +7740,9 @@
     <ClInclude Include="..\..\..\..\..\..\..\Documents\JUCE\modules\juce_gui_extra\juce_gui_extra.h">
       <Filter>JUCE Modules\juce_gui_extra</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>JUCE Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
@@ -7742,6 +7751,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\Downloads\Lato-Medium.ttf">
+      <Filter>Delay\Assets</Filter>
+    </None>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\src\common\README.md">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe\src\common</Filter>
     </None>
