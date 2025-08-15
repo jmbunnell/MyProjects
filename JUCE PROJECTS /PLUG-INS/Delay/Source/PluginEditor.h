@@ -35,6 +35,7 @@ private:
     RotaryKnob mixKnob { "Mix", audioProcessor.apvts, mixParamID};
     RotaryKnob delayTimeKnob { "Time", audioProcessor.apvts, delayTimeParamID};
     juce::GroupComponent delayGroup, feedbackGroup, outputGroup;
+    MainLookAndFeel mainLF;
     
     //juce::AudioProcessorValueTreeState::SliderAttachment attachment {
         //audioProcessor.apvts, gainParamID.getParamID(), gainKnob.slider
