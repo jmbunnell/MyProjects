@@ -39,7 +39,7 @@ DelayAudioProcessorEditor::~DelayAudioProcessorEditor()
     setLookAndFeel(nullptr);
 }
 
-//==============================================================================
+//=============================================================================
 void DelayAudioProcessorEditor::paint (juce::Graphics& g)
 {
     g.fillAll (Colors::background);
