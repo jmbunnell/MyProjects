@@ -7754,6 +7754,12 @@
     <None Include="..\..\..\..\..\..\..\Downloads\Lato-Medium.ttf">
       <Filter>Delay\Assets</Filter>
     </None>
+    <None Include="..\..\..\..\..\..\..\Downloads\Logo.png">
+      <Filter>Delay\Assets</Filter>
+    </None>
+    <None Include="..\..\..\..\..\..\..\Downloads\Noise.png">
+      <Filter>Delay\Assets</Filter>
+    </None>
     <None Include="C:\JUCE\modules\juce_audio_devices\native\oboe\src\common\README.md">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe\src\common</Filter>
     </None>

@@ -6,6 +6,8 @@
   <MAINGROUP id="MaKGtG" name="Delay">
     <GROUP id="{E96C3914-23CD-57DD-7936-6C5AB09925CD}" name="Assets">
       <FILE id="DTUb1F" name="Lato-Medium.ttf" compile="0" resource="1" file="../../../../../Downloads/Lato-Medium.ttf"/>
+      <FILE id="ulgjmW" name="Logo.png" compile="0" resource="1" file="../../../../../Downloads/Logo.png"/>
+      <FILE id="J9jFvg" name="Noise.png" compile="0" resource="1" file="../../../../../Downloads/Noise.png"/>
     </GROUP>
     <GROUP id="{D4BEDFC3-A7A0-F4E4-2FB8-2C5E6764617D}" name="Source">
       <FILE id="ONRfPG" name="LookAndFeel.cpp" compile="1" resource="0" file="Source/LookAndFeel.cpp"/>
