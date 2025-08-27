@@ -92,7 +92,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
     layout.add(std::make_unique<juce::AudioParameterFloat>(
         feedbackParamID,
         "Feedback",
-        juce::NormalisableRange<float>(0.0f, 100.0f, 1.0f),
+        juce::NormalisableRange<float>(-100.0f, 100.0f, 1.0f),
         0.0f,
         juce::AudioParameterFloatAttributes().withStringFromValueFunction(stringFromPercent)
     ));
@@ -106,6 +106,7 @@ void Parameters::update() noexcept
     //float newGain = juce::Decibels::decibelsToGain(gainInDecibels);
     gainSmoother.setTargetValue(juce::Decibels::decibelsToGain(gainParam->get()));
     mixSmoother.setTargetValue(mixParam->get() * 0.01f);
+    feedbackSmoother.setTargetValue(feedbackParam->get() * 0.01f);
     
     targetDelayTime = delayTimeParam->get();
     if (delayTime == 0.0f) {
@@ -130,7 +131,7 @@ void Parameters::reset() noexcept
     mix = 1.0f;
     mixSmoother.setCurrentAndTargetValue(mixParam->get() * 0.01f);
     feedback = 0.0f;
-    feedbackSmoother.setCurrentAndTargetValue(mixParam->get() * 0.01f);
+    feedbackSmoother.setCurrentAndTargetValue(feedbackParam->get() * 0.01f);
     
     gainSmoother.setCurrentAndTargetValue(
     juce::Decibels::decibelsToGain(gainParam->get()));
