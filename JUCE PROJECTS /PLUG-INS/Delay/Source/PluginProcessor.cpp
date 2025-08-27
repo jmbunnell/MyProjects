@@ -8,6 +8,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "ProtectYourEars.h"
 
 //==============================================================================
 DelayAudioProcessor::DelayAudioProcessor()
@@ -151,12 +152,17 @@ void DelayAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[mayb
         float wetL = delayLine.popSample(0);
         float wetR = delayLine.popSample(1);
         
+        wetL += delayLine.popSample(0, delayInSample * 2.0f, false) * 0.7f;
+        
         float mixL = dryL + wetL * params.mix;
         float mixR = dryR + wetR * params.mix;
         
         channelDataL[sample] = mixL * params.gain;
         channelDataR[sample] = mixR * params.gain;
     }
+    #if JUCE_DEBUG
+    protectYourEars(buffer);
+    #endif
 }
 
 //==============================================================================

@@ -131,6 +131,7 @@
 		540610008E74C460E568B737 /* PluginEditor.h */ /* PluginEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginEditor.h; path = ../../Source/PluginEditor.h; sourceTree = SOURCE_ROOT; };
 		5470ECE728C2C3D273095343 /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D5BC3D7B58D0472B7BAB252 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		5EAE6A6339A04F563F5EF9B7 /* ProtectYourEars.h */ /* ProtectYourEars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProtectYourEars.h; path = ../../Source/ProtectYourEars.h; sourceTree = SOURCE_ROOT; };
 		67D9F4C16C0652A43D23B811 /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = /Users/jake/Documents/JUCE/modules/juce_core; sourceTree = "<absolute>"; };
 		6B28368635D14983E37353E9 /* include_juce_gui_extra.mm */ /* include_juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_extra.mm; path = ../../JuceLibraryCode/include_juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
 		6F0847FA752BFB95CD96086F /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -430,6 +431,7 @@
 				540610008E74C460E568B737,
 				5D5BC3D7B58D0472B7BAB252,
 				44931BBBD9883519D854E275,
+				5EAE6A6339A04F563F5EF9B7,
 				DC439552C39A730DBB4EF33E,
 				DE883E1F4A932DB5579C34B7,
 			);
