@@ -31,6 +31,8 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     outputGroup.addAndMakeVisible(mixKnob);
     addAndMakeVisible(outputGroup);
     
+    feedbackGroup.addAndMakeVisible(stereoKnob);
+    
     setLookAndFeel(&mainLF);
     
     setSize (500, 330);
@@ -76,5 +78,7 @@ void DelayAudioProcessorEditor::resized()
     delayTimeKnob.setTopLeftPosition(20, 20);
     mixKnob.setTopLeftPosition(20, 20);
     gainKnob.setTopLeftPosition(mixKnob.getX(), mixKnob.getBottom() + 10);
+    
+    stereoKnob.setTopLeftPosition(feedbackKnob.getRight() + 20, 20);
     
 }
