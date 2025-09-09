@@ -125,6 +125,7 @@ void DelayAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
+    
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
