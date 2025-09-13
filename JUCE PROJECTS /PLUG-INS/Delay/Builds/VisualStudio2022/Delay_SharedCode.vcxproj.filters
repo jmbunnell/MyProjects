@@ -712,6 +712,9 @@
     <ClCompile Include="..\..\Source\RotaryKnob.cpp">
       <Filter>Delay\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Tempo.cpp">
+      <Filter>Delay\Source</Filter>
+    </ClCompile>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.cpp">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>
     </ClCompile>
@@ -3703,6 +3706,9 @@
       <Filter>Delay\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\RotaryKnob.h">
+      <Filter>Delay\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Tempo.h">
       <Filter>Delay\Source</Filter>
     </ClInclude>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
