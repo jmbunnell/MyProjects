@@ -18,7 +18,7 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     delayGroup.setTextLabelPosition(juce::Justification::horizontallyCentred);
     delayGroup.addAndMakeVisible(delayTimeKnob);
     addAndMakeVisible(delayGroup);
-    delayGroup.addAndMakeVisible(delayNoteKnob);
+    delayGroup.addChildComponent(delayNoteKnob);
     
     feedbackGroup.setText("Feedback");
     feedbackGroup.setTextLabelPosition(juce::Justification::horizontallyCentred);
@@ -41,14 +41,18 @@ DelayAudioProcessorEditor::DelayAudioProcessorEditor (DelayAudioProcessor& p)
     tempoSyncButton.setButtonText("Sync");
     tempoSyncButton.setClickingTogglesState(true);
     tempoSyncButton.setBounds(0, 0, 70, 27);
-    tempoSyncButton.setColour(juce::TextButton::ColourIds::buttonOnColourId, juce::Colours::red);
+    tempoSyncButton.setLookAndFeel(ButtonLookAndFeel::get());
     delayGroup.addAndMakeVisible(tempoSyncButton);
+    
+    updateDelayKnobs(audioProcessor.params.tempoSyncParam->get());
+    audioProcessor.params.tempoSyncParam->addListener(this);
     
     setSize (500, 330);
 }
 
 DelayAudioProcessorEditor::~DelayAudioProcessorEditor()
 {
+    audioProcessor.params.tempoSyncParam->removeListener(this);
     setLookAndFeel(nullptr);
 }
 
@@ -86,7 +90,7 @@ void DelayAudioProcessorEditor::resized()
     
     delayTimeKnob.setTopLeftPosition(20, 20);
     tempoSyncButton.setTopLeftPosition(20, delayTimeKnob.getBottom() + 10);
-    delayNoteKnob.setTopLeftPosition(20, tempoSyncButton.getBottom() - 5);
+    delayNoteKnob.setTopLeftPosition(delayTimeKnob.getX(), delayTimeKnob.getY());
     mixKnob.setTopLeftPosition(20, 20);
     gainKnob.setTopLeftPosition(mixKnob.getX(), mixKnob.getBottom() + 10);
     
@@ -95,4 +99,24 @@ void DelayAudioProcessorEditor::resized()
     lowCutKnob.setTopLeftPosition(feedbackKnob.getX(), feedbackKnob.getBottom() + 10);
     highCutKnob.setTopLeftPosition(lowCutKnob.getRight() + 20, lowCutKnob.getY());
     
+}
+
+void DelayAudioProcessorEditor::parameterValueChanged(int, float value)
+{
+    //DBG("parameter changed: " << value);
+    if (juce::MessageManager::getInstance()->isThisTheMessageThread()) {
+        
+        updateDelayKnobs(value != 0.0f);
+    } else {
+        juce::MessageManager::callAsync([this, value]
+        {
+            updateDelayKnobs(value != 0.0f);
+        });
+    }
+}
+
+void DelayAudioProcessorEditor::updateDelayKnobs(bool tempoSyncActive)
+{
+    delayTimeKnob.setVisible(!tempoSyncActive);
+    delayNoteKnob.setVisible(tempoSyncActive);
 }

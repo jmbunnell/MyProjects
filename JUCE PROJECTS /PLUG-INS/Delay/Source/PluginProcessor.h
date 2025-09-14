@@ -10,7 +10,7 @@
 
 #include <JuceHeader.h>
 #include "Parameters.h"
-
+#include "Tempo.h"
 
 
 //==============================================================================
@@ -60,13 +60,16 @@ public:
         *this, nullptr, "Parameters", Parameters::createParameterLayout()
         
     };
+   
+    Parameters params;
 
 private:
-    Parameters params;
+    
     float feedbackL = 0.0f;
     float feedbackR = 0.0f;
     float lastLowCut = -1.0f;
     float lastHighCut = -1.0f;
+    Tempo tempo;
     
     juce::dsp::DelayLine<float, juce::dsp::DelayLineInterpolationTypes::Linear> delayLine;
     juce::dsp::StateVariableTPTFilter<float> lowCutFilter;

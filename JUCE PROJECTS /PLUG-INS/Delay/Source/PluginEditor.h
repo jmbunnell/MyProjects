@@ -17,7 +17,7 @@
 //==============================================================================
 /**
 */
-class DelayAudioProcessorEditor  : public juce::AudioProcessorEditor
+class DelayAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::AudioProcessorParameter::Listener
 {
 public:
     DelayAudioProcessorEditor (DelayAudioProcessor&);
@@ -46,6 +46,11 @@ private:
     juce::AudioProcessorValueTreeState::ButtonAttachment tempoSyncAttachment {
         audioProcessor.apvts, tempoSyncParamID.getParamID(), tempoSyncButton
     };
+    
+    void parameterValueChanged(int, float) override;
+    void parameterGestureChanged(int, bool) override { }
+    
+    void updateDelayKnobs(bool tempoSyncActive);
     
     //juce::AudioProcessorValueTreeState::SliderAttachment attachment {
         //audioProcessor.apvts, gainParamID.getParamID(), gainKnob.slider
