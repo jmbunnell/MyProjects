@@ -26,6 +26,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		00B6CE5DAD2F91AF96F13AAF /* DelayLine.cpp */ = {isa = PBXBuildFile; fileRef = A06B82209A8AF3F7EBCBF441; };
 		100C6073CDF63FDBEE0152F1 /* AudioUnit.framework */ = {isa = PBXBuildFile; fileRef = 78FDE67B27E2D25B20036686; };
 		13791D239877E484B7773115 /* Parameters.cpp */ = {isa = PBXBuildFile; fileRef = 304EB37C619CE3135C54BFF0; };
 		141FEF6565513BF8CDDCC07B /* Security.framework */ = {isa = PBXBuildFile; fileRef = D7F4C8F26C901361316A168F; };
@@ -108,6 +109,7 @@
 		1273DE5FDD7EBDA734C135FD /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
 		12AA5E33CD145C770906FED9 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = /Users/jake/Documents/JUCE/modules/juce_data_structures; sourceTree = "<absolute>"; };
 		135CBCB3EF23ABF0FFE03233 /* include_juce_audio_plugin_client_VST3.mm */ /* include_juce_audio_plugin_client_VST3.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_VST3.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.mm; sourceTree = SOURCE_ROOT; };
+		14A5B687134F41E2E74D46CD /* DelayLine.h */ /* DelayLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DelayLine.h; path = ../../Source/DelayLine.h; sourceTree = SOURCE_ROOT; };
 		18786AB44C746DC27400753A /* include_juce_audio_formats.mm */ /* include_juce_audio_formats.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_formats.mm; path = ../../JuceLibraryCode/include_juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
 		188569D655CA29B142BD1D45 /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
 		1C308EFC28B520BC738D275B /* juce_VST3ManifestHelper.mm */ /* juce_VST3ManifestHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_VST3ManifestHelper.mm; path = /Users/jake/Documents/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm; sourceTree = "<absolute>"; };
@@ -155,6 +157,7 @@
 		8D2B5704FACEFC4657930F4A /* AU */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Delay.component; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D643AB497E4A5B4E4F3A530 /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		9AFDBBD839BD4B650C2383E8 /* include_juce_audio_processors_ara.cpp */ /* include_juce_audio_processors_ara.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_ara.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_ara.cpp; sourceTree = SOURCE_ROOT; };
+		A06B82209A8AF3F7EBCBF441 /* DelayLine.cpp */ /* DelayLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DelayLine.cpp; path = ../../Source/DelayLine.cpp; sourceTree = SOURCE_ROOT; };
 		A071E5F8B198564597CDF9D6 /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
 		A59108652F855D53A3995C25 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		A6084C1462BF48664B2680F2 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /Users/jake/Documents/JUCE/modules/juce_audio_devices; sourceTree = "<absolute>"; };
@@ -427,6 +430,8 @@
 		F379DD0728330F697BA9FE27 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A06B82209A8AF3F7EBCBF441,
+				14A5B687134F41E2E74D46CD,
 				078D894ED6D25080C478C031,
 				F85B788A2FE3088C3C613C05,
 				43960A9A4538D0E319E5E276,
@@ -862,6 +867,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B6CE5DAD2F91AF96F13AAF,
 				18A7D3B0553E7B773AFD9F6E,
 				13791D239877E484B7773115,
 				EF7E4EF8E956AADDE0C07EEA,

@@ -1,0 +1,33 @@
+/*
+  ==============================================================================
+
+    DelayLine.h
+    Created: 15 Sep 2025 6:49:17pm
+    Author:  Jacob Bunnell
+
+  ==============================================================================
+*/
+
+#pragma once
+
+#include <memory>
+
+class DelayLine
+{
+    public:
+    void setMaximumDelayInSamples(int maxLengthInSamples);
+    void reset() noexcept;
+    
+    void write(float input) noexcept;
+    float read(float delayInSamples) const noexcept;
+    
+    int getBuggerLength() const noexcept
+    {
+        return bufferLength;
+    }
+    
+    private:
+        std::unique_ptr<float[]> buffer;
+        int bufferLength = 0;
+        int writeIndex = 0;
+};
