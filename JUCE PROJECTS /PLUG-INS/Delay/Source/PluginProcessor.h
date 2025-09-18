@@ -11,7 +11,8 @@
 #include <JuceHeader.h>
 #include "Parameters.h"
 #include "Tempo.h"
-
+#include "DelayLine.h"
+//#include "Measurement.h"
 
 //==============================================================================
 /**
@@ -55,26 +56,48 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-    
+
+    juce::AudioProcessorParameter* getBypassParameter() const override;
+
     juce::AudioProcessorValueTreeState apvts {
         *this, nullptr, "Parameters", Parameters::createParameterLayout()
-        
     };
-   
+
     Parameters params;
 
+   // Measurement levelL, levelR;
+
 private:
-    
+    DelayLine delayLineL, delayLineR;
+
     float feedbackL = 0.0f;
     float feedbackR = 0.0f;
-    float lastLowCut = -1.0f;
-    float lastHighCut = -1.0f;
-    Tempo tempo;
-    
-    juce::dsp::DelayLine<float, juce::dsp::DelayLineInterpolationTypes::Linear> delayLine;
+
     juce::dsp::StateVariableTPTFilter<float> lowCutFilter;
     juce::dsp::StateVariableTPTFilter<float> highCutFilter;
-    
+
+    float lastLowCut = -1.0f;
+    float lastHighCut = -1.0f;
+
+    Tempo tempo;
+
+    /*
+    // For crossfading:
+    float delayInSamples = 0.0f;
+    float targetDelay = 0.0f;
+    float xfade = 0.0f;
+    float xfadeInc = 0.0f;
+    */
+
+    // For ducking:
+    float delayInSamples = 0.0f;
+    float targetDelay = 0.0f;
+    float fade = 0.0f;
+    float fadeTarget = 0.0f;
+    float coeff = 0.0f;
+    float wait = 0.0f;
+    float waitInc = 0.0f;
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DelayAudioProcessor)
 };

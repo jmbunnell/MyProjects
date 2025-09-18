@@ -42,6 +42,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.juce.audiopluginhost"
          FilePath = "/Users/jake/Desktop/AudioPluginHost.app">
       </PathRunnable>
       <CommandLineArguments>
