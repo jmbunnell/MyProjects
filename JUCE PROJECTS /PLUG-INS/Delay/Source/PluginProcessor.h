@@ -12,7 +12,7 @@
 #include "Parameters.h"
 #include "Tempo.h"
 #include "DelayLine.h"
-//#include "Measurement.h"
+#include "Measurement.h"
 
 //==============================================================================
 /**
@@ -64,6 +64,8 @@ public:
     };
 
     Parameters params;
+    
+    Measurement levelL, levelR;
 
    // Measurement levelL, levelR;
 

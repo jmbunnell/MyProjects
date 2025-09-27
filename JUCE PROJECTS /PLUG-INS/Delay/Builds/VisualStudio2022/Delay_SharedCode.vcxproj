@@ -145,6 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\DelayLine.cpp"/>
+    <ClCompile Include="..\..\Source\LevelMeter.cpp"/>
     <ClCompile Include="..\..\Source\LookAndFeel.cpp"/>
     <ClCompile Include="..\..\Source\Parameters.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
@@ -2957,7 +2958,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\DelayLine.h"/>
     <ClInclude Include="..\..\Source\DSP.h"/>
+    <ClInclude Include="..\..\Source\LevelMeter.h"/>
     <ClInclude Include="..\..\Source\LookAndFeel.h"/>
+    <ClInclude Include="..\..\Source\Measurement.h"/>
     <ClInclude Include="..\..\Source\Parameters.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>

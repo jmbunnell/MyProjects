@@ -124,8 +124,8 @@ void DelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 
     tempo.reset();
 
-    //levelL.reset();
-    //levelR.reset();
+    levelL.reset();
+    levelR.reset();
 
     /*
     // For crossfading:
@@ -330,7 +330,10 @@ void DelayAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[mayb
         maxL = std::max(maxL, std::abs(outL));
         maxR = std::max(maxR, std::abs(outR));
     }
-
+    
+    levelL.updateIfGreater(maxL);
+    levelR.updateIfGreater(maxR);
+    
     #if JUCE_DEBUG
     protectYourEars(buffer);
     #endif

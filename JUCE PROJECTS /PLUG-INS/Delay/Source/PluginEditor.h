@@ -13,6 +13,7 @@
 #include "Parameters.h"
 #include "RotaryKnob.h"
 #include "LookAndFeel.h"
+#include "LevelMeter.h"
 
 //==============================================================================
 /**
@@ -52,6 +53,7 @@ private:
     
     void updateDelayKnobs(bool tempoSyncActive);
     
+    LevelMeter meter;
     //juce::AudioProcessorValueTreeState::SliderAttachment attachment {
         //audioProcessor.apvts, gainParamID.getParamID(), gainKnob.slider
     //};
