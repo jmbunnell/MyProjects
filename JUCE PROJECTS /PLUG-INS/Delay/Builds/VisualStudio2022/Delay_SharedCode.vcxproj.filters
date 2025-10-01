@@ -7784,6 +7784,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\Downloads\Bypass.png">
+      <Filter>Delay\Assets</Filter>
+    </None>
     <None Include="..\..\..\..\..\..\..\Downloads\Lato-Medium.ttf">
       <Filter>Delay\Assets</Filter>
     </None>

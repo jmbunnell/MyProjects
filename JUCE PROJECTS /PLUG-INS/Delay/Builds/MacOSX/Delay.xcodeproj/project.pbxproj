@@ -165,6 +165,7 @@
 		A59108652F855D53A3995C25 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		A6084C1462BF48664B2680F2 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /Users/jake/Documents/JUCE/modules/juce_audio_devices; sourceTree = "<absolute>"; };
 		AB49059F5FA3A0F7E3DC5AA0 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
+		ABF735CB6C2B6F2EC8B0652B /* Bypass.png */ /* Bypass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bypass.png; path = ../../../../../../../Downloads/Bypass.png; sourceTree = SOURCE_ROOT; };
 		B09205566C168CF24EC8C12E /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B173A8AEEF6CB894FD2850CA /* AUv3 AppExtension */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Delay.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9488760A117D1C128C45CB /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -368,6 +369,7 @@
 		787BE6B0AF2361087F6D3A67 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				ABF735CB6C2B6F2EC8B0652B,
 				D18475A2D05816239A5566D0,
 				D59330F4825F73589FE4DB3D,
 				C4E490CB0C5F09495BEEBF89,

@@ -4322,6 +4322,7 @@
     <ClInclude Include="..\..\JuceLibraryCode\JucePluginDefines.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\..\..\..\Downloads\Bypass.png"/>
     <None Include="..\..\..\..\..\..\..\Downloads\Lato-Medium.ttf"/>
     <None Include="..\..\..\..\..\..\..\Downloads\Logo.png"/>
     <None Include="..\..\..\..\..\..\..\Downloads\Noise.png"/>
