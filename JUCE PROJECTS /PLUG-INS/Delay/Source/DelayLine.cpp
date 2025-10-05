@@ -88,7 +88,7 @@ float DelayLine::read(float delayInSamples) const noexcept
 
 float DelayLine::read(float delayInSamples) const noexcept
 {
-    jassert(delayInSamples >= 1.0f);
+    jassert(delayInSamples >= 1000.0f);
     jassert(delayInSamples <= bufferLength - 2.0f);
 
     int integerDelay = int(delayInSamples);

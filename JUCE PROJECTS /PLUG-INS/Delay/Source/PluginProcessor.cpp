@@ -184,6 +184,7 @@ void DelayAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, [[mayb
         buffer.clear (i, 0, buffer.getNumSamples());
 
     params.update();
+    if (params.bypassed) { return; }
     tempo.update(getPlayHead());
 
     float syncedTime = float(tempo.getMillisecondsForNoteLength(params.delayNote));
